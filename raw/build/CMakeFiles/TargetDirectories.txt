@@ -1,0 +1,3 @@
+/home/zihao/myDB/build/CMakeFiles/redbase.dir
+/home/zihao/myDB/build/CMakeFiles/edit_cache.dir
+/home/zihao/myDB/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,87 @@
+[
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/interp.cc.o -c /home/zihao/myDB/src/interp.cc",
+  "file": "/home/zihao/myDB/src/interp.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/ix_error.cc.o -c /home/zihao/myDB/src/ix_error.cc",
+  "file": "/home/zihao/myDB/src/ix_error.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/nodes.cc.o -c /home/zihao/myDB/src/nodes.cc",
+  "file": "/home/zihao/myDB/src/nodes.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_buffermgr.cc.o -c /home/zihao/myDB/src/pf_buffermgr.cc",
+  "file": "/home/zihao/myDB/src/pf_buffermgr.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_error.cc.o -c /home/zihao/myDB/src/pf_error.cc",
+  "file": "/home/zihao/myDB/src/pf_error.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_filehandle.cc.o -c /home/zihao/myDB/src/pf_filehandle.cc",
+  "file": "/home/zihao/myDB/src/pf_filehandle.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_hashtable.cc.o -c /home/zihao/myDB/src/pf_hashtable.cc",
+  "file": "/home/zihao/myDB/src/pf_hashtable.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_manager.cc.o -c /home/zihao/myDB/src/pf_manager.cc",
+  "file": "/home/zihao/myDB/src/pf_manager.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_pagehandle.cc.o -c /home/zihao/myDB/src/pf_pagehandle.cc",
+  "file": "/home/zihao/myDB/src/pf_pagehandle.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/pf_statistics.cc.o -c /home/zihao/myDB/src/pf_statistics.cc",
+  "file": "/home/zihao/myDB/src/pf_statistics.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/printer.cc.o -c /home/zihao/myDB/src/printer.cc",
+  "file": "/home/zihao/myDB/src/printer.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/ql_error.cc.o -c /home/zihao/myDB/src/ql_error.cc",
+  "file": "/home/zihao/myDB/src/ql_error.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/rm_error.cc.o -c /home/zihao/myDB/src/rm_error.cc",
+  "file": "/home/zihao/myDB/src/rm_error.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/sm_error.cc.o -c /home/zihao/myDB/src/sm_error.cc",
+  "file": "/home/zihao/myDB/src/sm_error.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/src/statistics.cc.o -c /home/zihao/myDB/src/statistics.cc",
+  "file": "/home/zihao/myDB/src/statistics.cc"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/gcc  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -g -g -o CMakeFiles/redbase.dir/lex.yy.c.o -c /home/zihao/myDB/build/lex.yy.c",
+  "file": "/home/zihao/myDB/build/lex.yy.c"
+},
+{
+  "directory": "/home/zihao/myDB/build",
+  "command": "/usr/bin/g++  -I/home/zihao/myDB/src -I/home/zihao/myDB/build  -std=c++11 -Wno-deprecated-register -g -o CMakeFiles/redbase.dir/y.tab.cc.o -c /home/zihao/myDB/build/y.tab.cc",
+  "file": "/home/zihao/myDB/build/y.tab.cc"
+}
+]

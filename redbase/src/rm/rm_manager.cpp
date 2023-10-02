@@ -4,9 +4,10 @@ void RmManager::create_file(const std::string &filename, int record_size) {
     if (record_size < 1 || record_size > RM_MAX_RECORD_SIZE) {
         throw InvalidRecordSizeError(record_size);
     }
-    PfManager::create_file(filename);
+    PfManager::create_file(filename); // 此类调用均为静态成员调用！
     int fd = PfManager::open_file(filename);
 
+    // 由于有计算依赖不能放在花括号中进行统一初始化！
     RmFileHdr hdr{};
     hdr.record_size = record_size;
     hdr.num_pages = 1;
@@ -15,7 +16,8 @@ void RmManager::create_file(const std::string &filename, int record_size) {
     hdr.num_records_per_page =
         (Bitmap::WIDTH * (PAGE_SIZE - 1 - (int)sizeof(RmPageHdr)) + 1) / (1 + record_size * Bitmap::WIDTH);
     hdr.bitmap_size = (hdr.num_records_per_page + Bitmap::WIDTH - 1) / Bitmap::WIDTH;
-    PfPager::write_page(fd, RM_FILE_HDR_PAGE, (uint8_t *)&hdr, sizeof(hdr));
+
+    PfPager::write_page(fd, RM_FILE_HDR_PAGE, (uint8_t *)&hdr, sizeof(hdr)); // 接口函数，如果有多个PFManager ?
     PfManager::close_file(fd);
 }
 

@@ -4,7 +4,7 @@
 #include "rm/rm_defs.h"
 #include <memory>
 
-struct RmPageHandle {
+struct RmPageHandle { // 细看！！！！
     RmPageHdr *hdr;
     uint8_t *bitmap;
     uint8_t *slots;
@@ -27,7 +27,7 @@ class RmFileHandle {
     RmFileHdr hdr;
     int fd;
 
-    RmFileHandle(int fd_) {
+    RmFileHandle(int fd_) { // 只支持单页？？？
         fd = fd_;
         PfPager::read_page(fd, RM_FILE_HDR_PAGE, (uint8_t *)&hdr, sizeof(hdr));
     }

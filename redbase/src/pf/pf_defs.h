@@ -7,7 +7,7 @@
 static constexpr int PAGE_SIZE = 4096;
 static constexpr int NUM_CACHE_PAGES = 65536;
 
-struct PageId {
+struct PageId { // see
     int fd;
     int page_no;
 

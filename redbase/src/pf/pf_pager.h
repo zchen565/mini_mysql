@@ -42,7 +42,8 @@ class PfPager {
   private:
     uint8_t _cache[NUM_CACHE_PAGES * PAGE_SIZE];
     Page _pages[NUM_CACHE_PAGES];
-    std::unordered_map<PageId, std::list<Page *>::iterator> _busy_map;
+    
+    std::unordered_map<PageId, std::list<Page *>::iterator> _busy_map; // this is the hash !
     std::list<Page *> _busy_pages;
     std::list<Page *> _free_pages;
 };

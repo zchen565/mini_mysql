@@ -15,7 +15,7 @@ PfPager::~PfPager() {
     assert(_free_pages.size() == NUM_CACHE_PAGES);
 }
 
-void PfPager::read_page(int fd, int page_no, uint8_t *buf, int num_bytes) {
+void PfPager::read_page(int fd, int page_no, uint8_t *buf, int num_bytes) { // this only support a single page read
     lseek(fd, page_no * PAGE_SIZE, SEEK_SET);
     ssize_t bytes_read = read(fd, buf, num_bytes);
     if (bytes_read != num_bytes) {

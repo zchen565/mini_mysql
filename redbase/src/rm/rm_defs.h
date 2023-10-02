@@ -21,9 +21,10 @@ struct RmPageHdr {
     int num_records;
 };
 
+// RmRecord 是buffer pool 中的copy 而不是本身！
 struct RmRecord {
-    uint8_t *data;
-    int size;
+    uint8_t *data; // 8
+    int size; // 4
 
     RmRecord(const RmRecord &other) = delete;
 
@@ -36,3 +37,5 @@ struct RmRecord {
 
     ~RmRecord() { delete[] data; }
 };
+
+// sizeof(RmRecord) == 16

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <map>
 
+// enum的打印
 template <typename T, typename = typename std::enable_if<std::is_enum<T>::value, T>::type>
 static std::ostream &operator<<(std::ostream &os, const T &enum_val) {
     return os << (int)enum_val;
@@ -16,6 +17,7 @@ static std::istream &operator>>(std::istream &is, T &enum_val) {
     return is;
 }
 
+// as stated in RM section, this will be accessed by non rm-client
 struct Rid {
     int page_no;
     int slot_no;
@@ -27,6 +29,8 @@ struct Rid {
     friend bool operator!=(const Rid &x, const Rid &y) { return !(x == y); }
 };
 
+
+// or use RTTI
 enum ColType { TYPE_INT, TYPE_FLOAT, TYPE_STRING };
 
 static inline std::string coltype2str(ColType type) {

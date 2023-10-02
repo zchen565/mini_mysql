@@ -10,7 +10,7 @@
 
 class PfManager {
   public:
-    static PfPager pager;
+    static PfPager pager; // 核心关键 ！类似单例模式
 
     static bool is_file(const std::string &path);
 
@@ -25,9 +25,12 @@ class PfManager {
     // where is AllocateBlock and DisposeBlock
     // the return code is not used here
 
-  private:
+  private: // this is the global page table ! we didn't implement any cache policy here ! This is the IO contest ! 
     static std::unordered_map<std::string, int> _path2fd;
     static std::unordered_map<int, std::string> _fd2path;
+
+    // 可以在此处添加 buffer pool 用于管理缓存，需要fd page_no 二元组 (PageID)
+
 };
 
 // RC OpenFile (const char *fileName, PF_FileHandle &fileHandle)

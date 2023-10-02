@@ -1,0 +1,5 @@
+if(EXISTS "/home/zihao/redbase-cpp/build/src/ql_test[1]_tests.cmake")
+  include("/home/zihao/redbase-cpp/build/src/ql_test[1]_tests.cmake")
+else()
+  add_test(ql_test_NOT_BUILT ql_test_NOT_BUILT)
+endif()

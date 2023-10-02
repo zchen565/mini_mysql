@@ -1,0 +1,5 @@
+if(EXISTS "/home/zihao/redbase-cpp/build/src/parser_test[1]_tests.cmake")
+  include("/home/zihao/redbase-cpp/build/src/parser_test[1]_tests.cmake")
+else()
+  add_test(parser_test_NOT_BUILT parser_test_NOT_BUILT)
+endif()

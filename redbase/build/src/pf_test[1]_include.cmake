@@ -1,0 +1,5 @@
+if(EXISTS "/home/zihao/redbase-cpp/build/src/pf_test[1]_tests.cmake")
+  include("/home/zihao/redbase-cpp/build/src/pf_test[1]_tests.cmake")
+else()
+  add_test(pf_test_NOT_BUILT pf_test_NOT_BUILT)
+endif()

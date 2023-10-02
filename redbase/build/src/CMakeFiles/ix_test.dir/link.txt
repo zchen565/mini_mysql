@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/ix_test.dir/ix/ix_test.cpp.o -o ../bin/ix_test  ../lib/libredbase-cpp.a ../lib/libgtest_main.a ../lib/libgtest.a 

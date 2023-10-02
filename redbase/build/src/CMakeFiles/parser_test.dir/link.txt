@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/parser_test.dir/parser/parser_test.cpp.o -o ../bin/parser_test  ../lib/libredbase-cpp.a ../lib/libgtest_main.a ../lib/libgtest.a 

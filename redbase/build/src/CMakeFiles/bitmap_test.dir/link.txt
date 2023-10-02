@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/bitmap_test.dir/rm/bitmap_test.cpp.o -o ../bin/bitmap_test  ../lib/libredbase-cpp.a ../lib/libgtest_main.a ../lib/libgtest.a 

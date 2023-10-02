@@ -1,0 +1,10 @@
+IxTest.basic 1 9.16981
+parser.basic 1 0.00269686
+PfManagerTest.basic 1 0.00697511
+PfPagerTest.lru 1 17.6401
+PfPagerTest.readwrite 1 11.3443
+ql.basic 1 0.0129259
+Bitmap.basic 1 1.801
+rm.basic 1 13.0539
+sm.basic 1 0.0147684
+---

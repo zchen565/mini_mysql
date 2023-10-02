@@ -1,0 +1,5 @@
+if(EXISTS "/home/zihao/redbase-cpp/build/src/rm_test[1]_tests.cmake")
+  include("/home/zihao/redbase-cpp/build/src/rm_test[1]_tests.cmake")
+else()
+  add_test(rm_test_NOT_BUILT rm_test_NOT_BUILT)
+endif()

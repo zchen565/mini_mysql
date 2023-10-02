@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/sm_test.dir/sm/sm_test.cpp.o -o ../bin/sm_test  ../lib/libredbase-cpp.a ../lib/libgtest_main.a ../lib/libgtest.a 

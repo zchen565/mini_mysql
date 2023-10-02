@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/rawcli.dir/rawcli.cpp.o -o ../bin/rawcli  ../lib/libredbase-cpp.a 

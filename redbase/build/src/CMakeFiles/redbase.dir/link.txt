@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/redbase.dir/redbase.cpp.o -o ../bin/redbase  ../lib/libredbase-cpp.a -lreadline 

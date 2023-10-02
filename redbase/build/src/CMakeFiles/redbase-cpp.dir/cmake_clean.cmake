@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../lib/libredbase-cpp.a"
+  "../lib/libredbase-cpp.pdb"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_index_handle.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_index_handle.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_manager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_manager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_scan.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/ix/ix_scan.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/lex.yy.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/lex.yy.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/parser/ast.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/parser/ast.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/pf/pf_manager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/pf/pf_manager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/pf/pf_pager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/pf/pf_pager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/ql/ql_manager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/ql/ql_manager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/ql/ql_node.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/ql/ql_node.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_file_handle.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_file_handle.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_manager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_manager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_scan.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/rm/rm_scan.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/sm/sm_manager.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/sm/sm_manager.cpp.o.d"
+  "CMakeFiles/redbase-cpp.dir/yacc.tab.cpp.o"
+  "CMakeFiles/redbase-cpp.dir/yacc.tab.cpp.o.d"
+  "lex.yy.cpp"
+  "yacc.tab.cpp"
+  "yacc.tab.h"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/redbase-cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -Wall -pedantic-errors -g CMakeFiles/ql_test.dir/ql/ql_test.cpp.o -o ../bin/ql_test  ../lib/libredbase-cpp.a ../lib/libgtest_main.a ../lib/libgtest.a 

@@ -1,0 +1,7 @@
+add_test( PfManagerTest.basic /home/zihao/redbase-cpp/build/bin/pf_test [==[--gtest_filter=PfManagerTest.basic]==] --gtest_also_run_disabled_tests)
+set_tests_properties( PfManagerTest.basic PROPERTIES WORKING_DIRECTORY /home/zihao/redbase-cpp/build/src SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test( PfPagerTest.lru /home/zihao/redbase-cpp/build/bin/pf_test [==[--gtest_filter=PfPagerTest.lru]==] --gtest_also_run_disabled_tests)
+set_tests_properties( PfPagerTest.lru PROPERTIES WORKING_DIRECTORY /home/zihao/redbase-cpp/build/src SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test( PfPagerTest.readwrite /home/zihao/redbase-cpp/build/bin/pf_test [==[--gtest_filter=PfPagerTest.readwrite]==] --gtest_also_run_disabled_tests)
+set_tests_properties( PfPagerTest.readwrite PROPERTIES WORKING_DIRECTORY /home/zihao/redbase-cpp/build/src SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set( pf_test_TESTS PfManagerTest.basic PfPagerTest.lru PfPagerTest.readwrite)

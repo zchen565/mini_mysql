@@ -6,9 +6,10 @@
 
 struct RmPageHandle { // 细看！！！！
     RmPageHdr *hdr;
-    uint8_t *bitmap;
-    uint8_t *slots;
+    uint8_t *bitmap; // what is this for ? record ?
+    uint8_t *slots; // what is this for ? 
     Page *page;
+
     const RmFileHdr *fhdr;
 
     RmPageHandle(const RmFileHdr *fhdr_, Page *page_) : page(page_), fhdr(fhdr_) {

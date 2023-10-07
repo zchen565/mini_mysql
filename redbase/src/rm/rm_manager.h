@@ -12,7 +12,7 @@ class RmManager {
     static void destroy_file(const std::string &filename);
 
     // client : SM (DML)
-    static std::unique_ptr<RmFileHandle> open_file(const std::string &filename);
+    static std::unique_ptr<RmFileHandle> open_file(const std::string &filename); // note this we have the RMFileHandle !
 
     static void close_file(const RmFileHandle *fh);
 };

@@ -4,11 +4,16 @@
 
 `/redbase` is the C++17 implementation 
 
+`/mvcc` is some auxiliary component for mvcc, the master branch doesn't support mvcc
+
+check __mvcc__ branch for concurrent contral, it is not supported currently.
+
 Note:
 
 PF component is simplified:
-- it does not have a buffer pool (therefore no cache algo here)
-- it only supports a file in single page (FORBIDDEN multi page file !!!!!)
+- it does not have a buffer pool (therefore no cache algorithm here)
+
+## architecture
 
 # Further 
 

@@ -1,6 +1,8 @@
 #include "pf/pf.h"
 #include <gtest/gtest.h>
 
+
+// understand from test !!!
 TEST(PfManagerTest, basic) {
     std::string path1 = "a.txt";
     if (PfManager::is_file(path1)) {
@@ -38,10 +40,13 @@ TEST(PfManagerTest, basic) {
     EXPECT_THROW(PfManager::destroy_file(path1), FileNotFoundError);
 }
 
+// auxiliary function : buffer pool
+// check whether busy page is in bus list
 static void check_pages(const std::list<PageId> &busy_page_ids) {
     EXPECT_EQ(PfManager::pager.free_list().size(), NUM_CACHE_PAGES - busy_page_ids.size());
     EXPECT_EQ(PfManager::pager.busy_list().size(), busy_page_ids.size());
     auto busy_it = PfManager::pager.busy_list().begin();
+
     for (const auto &pid : busy_page_ids) {
         EXPECT_EQ(pid, (*busy_it)->id);
         EXPECT_TRUE(PfManager::pager.in_cache(pid));

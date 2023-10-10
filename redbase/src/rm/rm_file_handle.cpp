@@ -73,7 +73,7 @@ RmPageHandle RmFileHandle::fetch_page(int page_no) const {
 RmPageHandle RmFileHandle::create_page() {
     if (hdr.first_free == RM_NO_PAGE) {
         // No free pages. Need to allocate a new page.
-        Page *page = PfManager::pager.create_page(fd, hdr.num_pages);
+        Page *page = PfManager::pager.create_page(fd, hdr.num_pages); // this is the only place call create_page !
         // Init page handle
         RmPageHandle ph = RmPageHandle(&hdr, page);
         ph.hdr->num_records = 0;

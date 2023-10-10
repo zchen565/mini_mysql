@@ -24,7 +24,7 @@ struct RmPageHdr {
     int num_records;
 };
 
-// RmRecord 是buffer pool 中的copy 而不是本身！
+// RmRecord 是buffer pool 中的copy 而不是本身！?????????????? this is from the class note 
 struct RmRecord {
     uint8_t *data; // 8
     // NOTE : sizeof(uint8_t) == 1, 8 is bits which is 1 byte

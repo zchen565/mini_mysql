@@ -2,8 +2,14 @@
 #include <cassert>
 #include <unistd.h>
 
-PfPager::PfPager() {
+/*
+* note: if it is in current setting, we cannot use assert(), for all the cache miss we need to refetch the page
+*/
+
+PfPager::PfPager() { // this is the buffer pool, it is static so it is initialized
+    // where is the malloc ?
     for (size_t i = 0; i < NUM_CACHE_PAGES; i++) {
+        // 连续内存用于初始化！！！
         _pages[i].buf = _cache + i * PAGE_SIZE;
         _pages[i].is_dirty = false;
         _free_pages.push_back(&_pages[i]);
@@ -23,9 +29,9 @@ void PfPager::read_page(int fd, int page_no, uint8_t *buf, int num_bytes) { // t
     }
 }
 
-void PfPager::write_page(int fd, int page_no, const uint8_t *buf, int num_bytes) {
+void PfPager::write_page(int fd, int page_no, const uint8_t *buf, int num_bytes) { // what is there needs a new page
     lseek(fd, page_no * PAGE_SIZE, SEEK_SET);
-    ssize_t bytes_write = write(fd, buf, num_bytes);
+    ssize_t bytes_write = write(fd, buf, num_bytes); 
     if (bytes_write != num_bytes) {
         throw UnixError();
     }
@@ -50,7 +56,7 @@ void PfPager::flush_file(int fd) {
     }
 }
 
-void PfPager::force_page(Page *page) {
+void PfPager::force_page(Page *page) { // this is need to be done periodically in concurrent setting !
     if (page->is_dirty) {
         write_page(page->id.fd, page->id.page_no, page->buf, PAGE_SIZE);
         page->is_dirty = false;
@@ -63,7 +69,7 @@ Page *PfPager::get_page(int fd, int page_no) {
     PageId page_id(fd, page_no);
     auto map_it = _busy_map.find(page_id);
     if (map_it == _busy_map.end()) {
-        // Page is not in memory (i.e. on disk). Allocate new cache page for it.
+        // Page is not in memory (i.e. on disk). Allocate new cache page for it. !!!!!!!!!!!!!!!!
         if (_free_pages.empty()) {
             // Cache is full. Need to flush a page to disk.
             assert(!_busy_pages.empty());
@@ -74,6 +80,7 @@ Page *PfPager::get_page(int fd, int page_no) {
             // Cache is not full. Allocate from free pages.
             _busy_pages.splice(_busy_pages.begin(), _free_pages, _free_pages.begin());
         }
+
         _busy_map[page_id] = _busy_pages.begin();
         page = _busy_pages.front();
         page->id = page_id;
@@ -83,7 +90,7 @@ Page *PfPager::get_page(int fd, int page_no) {
         }
     } else {
         // Page is in memory
-        page = *map_it->second;
+        page = *map_it->second; // map_it->second is the iteraotr of the list, *(map_it->second) is Page*
         access(page);
     }
     return page;

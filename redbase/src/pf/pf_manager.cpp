@@ -36,6 +36,9 @@ void PfManager::destroy_file(const std::string &path) {
     }
 }
 
+/**
+ * 注意open并不会将page复制到buffer pool中！
+*/
 int PfManager::open_file(const std::string &path) {
     if (!is_file(path)) {
         throw FileNotFoundError(path);
